@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".TopNavigationFragment">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/topNavigationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:contentDescription="app_icon"
+            android:src="@drawable/ic_circletofind_logo" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/black"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/bellIcon"
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:contentDescription="share"
+                android:src="@drawable/ic_share" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/black"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/messageIcon"
+                android:layout_width="28dp"
+                android:layout_height="50dp"
+                android:contentDescription="settings"
+                android:src="@drawable/ic_settings" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+
+    </LinearLayout>
+
+    <!-- Full-width Divider (this will span the screen width) -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>

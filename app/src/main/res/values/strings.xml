@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CircleToFind</string>
+    <string name="captured_image">Captured image</string>
+    <string name="crop_amp_search"><![CDATA[Crop & Search]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="app_icon">app_icon</string>
+    <string name="share">share</string>
+    <string name="image_search">Image Search</string>
+    <string name="swipe_right_to_enable_swipe_left_to_disable">Swipe right to enable • Swipe left to disable</string>
+    <string name="settings">settings</string>
+</resources>

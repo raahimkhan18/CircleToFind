@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/topNavigationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:contentDescription="@string/app_icon"
+            android:src="@drawable/ic_circletofind_logo" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Share Icon -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/black"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/shareIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="@string/share"
+                android:src="@drawable/ic_share" />
+        </FrameLayout>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp" />
+
+        <!-- Settings Icon -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/black"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="@string/settings"
+                android:src="@drawable/ic_settings" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+
+    <!-- Centered Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/texQoute"
+            android:layout_width="246dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="Quote Logo"
+            android:src="@drawable/ic_splash_qoute" />
+
+        <!-- Switch Track -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customSwitchContainer"
+            android:layout_width="200dp"
+            android:layout_height="73dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_switch_track_off"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="0dp">
+
+            <!-- Thumb -->
+            <View
+                android:id="@+id/switchThumb"
+                android:layout_width="49dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/custom_switch_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- ON Text -->
+            <TextView
+                android:id="@+id/switchOnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/on"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- OFF Text -->
+            <TextView
+                android:id="@+id/switchOffText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/off"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Info Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/swipe_right_to_enable_swipe_left_to_disable"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnImageSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:baselineAligned="false"
+            android:text="@string/image_search"
+            android:textStyle="bold|italic"
+            />
+    </LinearLayout>
+
+</LinearLayout>

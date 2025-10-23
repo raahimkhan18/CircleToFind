@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <View
+        android:id="@+id/dragHandle"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:alpha="0.45"
+        android:background="@android:color/darker_gray" />
+</FrameLayout>
