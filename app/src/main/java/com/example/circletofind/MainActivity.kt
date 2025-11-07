@@ -82,11 +82,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun startOverlayService() {
         val i = Intent(this, OverlayService::class.java)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(i)
-        } else {
-            startService(i)
-        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) startForegroundService(i)
+        else startService(i)
     }
 
     private fun stopOverlayService() {

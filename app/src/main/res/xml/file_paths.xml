@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- allow cache sharing for saved bitmaps -->
-    <cache-path name="cache" path="." />
+    <!-- Allow sharing files from cache directory -->
+    <cache-path
+        name="cache"
+        path="." />
 </paths>

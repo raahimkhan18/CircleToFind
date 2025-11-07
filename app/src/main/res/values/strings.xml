@@ -11,4 +11,11 @@
     <string name="image_search">Image Search</string>
     <string name="swipe_right_to_enable_swipe_left_to_disable">Swipe right to enable • Swipe left to disable</string>
     <string name="settings">settings</string>
+
+    <string name="start_screen_capture">Start Screen Capture</string>
+    <string name="open_with">Open with</string>
+    <string name="screen_capture_failed">Screen capture failed</string>
+
 </resources>
+
+

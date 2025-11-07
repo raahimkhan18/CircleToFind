@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.circletofind">
 
-    <!-- Permissions -->
+    <!-- Permissions for overlay and screen recording -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CircleToFind">
 
-        <!-- Main Activity -->
+        <!-- Launcher Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,22 +27,27 @@
             </intent-filter>
         </activity>
 
-        <!-- Transparent Draw Activity -->
+        <!-- Dialog for screen capture -->
         <activity
-            android:name=".TransparentDrawActivity"
+            android:name=".CastDialogActivity"
             android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@style/TransparentActivityTheme"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert"
+            android:taskAffinity=""
             android:excludeFromRecents="true"
-            android:showWhenLocked="true"
-            android:turnScreenOn="true" />
+            android:launchMode="singleInstance" />
 
-        <!-- Overlay Service -->
+        <activity
+            android:name=".ScreenCaptureActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert"/>
+
+        <!-- Foreground overlay service -->
         <service
             android:name=".OverlayService"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
 
-        <!-- FileProvider (for sharing screenshots or images) -->
+        <!-- FileProvider for sharing screenshots -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -50,4 +59,5 @@
         </provider>
 
     </application>
+
 </manifest>
